@@ -6,6 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="ui.title">OWアンチくん</title>
+    <script>
+        (() => {
+            const LANGUAGE_STORAGE_KEY = "ow-anti-kun-language";
+            const params = new URLSearchParams(window.location.search);
+            const urlLang = params.get("lang");
+            let storedLang = null;
+            try {
+                storedLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+            } catch (e) {}
+            const navLang = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase().split("-")[0];
+            const detected = [urlLang, storedLang, navLang].find(l => l === "ja" || l === "en") || "ja";
+            document.documentElement.lang = detected;
+        })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
