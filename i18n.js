@@ -10,7 +10,7 @@ const STRINGS = {
     ja: {
         ui: {
             title: "OWアンチくん",
-            roleQueue: "ロールキュー(5vs5)",
+            roleQueue: "ロールキュー",
             languageLabel: "言語"
         },
         tabs: {
@@ -29,14 +29,25 @@ const STRINGS = {
             placeholder: "敵ヒーローを選択してください"
         },
         buttons: {
-            db: "データベースを閲覧",
+            db: "データベースを管理",
             reset: "リセット"
         },
         db: {
             title: "ヒーロー相性データベース",
             colHero: "ヒーロー",
-            colComp: "各構成への耐性",
-            colBad: "苦手な相手(影響度)"
+            colComp: "苦手な構成(D/R/P)",
+            hintHighValue: "数字が大きいほど苦手",
+            colBad: "苦手な相手",
+            undoTitle: "元に戻す",
+            redoTitle: "やり直し",
+            resetBtn: "初期化",
+            pickerTitle: "追加するヒーローを選択",
+            pickerSubtitle: "※すでに登録されているヒーローは上書きされます",
+            ratingTitle: "苦手度を設定 (1-4)",
+            cancel: "キャンセル",
+            done: "完了",
+            edit: "編集",
+            add: "＋追加"
         },
         archetypes: {
             dive: "ダイブ",
@@ -56,7 +67,7 @@ const STRINGS = {
     en: {
         ui: {
             title: "OW Anti-kun",
-            roleQueue: "Role Queue (5v5)",
+            roleQueue: "Role Queue",
             languageLabel: "Language"
         },
         tabs: {
@@ -75,14 +86,25 @@ const STRINGS = {
             placeholder: "Select enemy heroes"
         },
         buttons: {
-            db: "View Database",
+            db: "Manage Database",
             reset: "Reset"
         },
         db: {
             title: "Hero Matchup Database",
             colHero: "Hero",
-            colComp: "Composition Matchups",
-            colBad: "Difficult Matchups (Impact)"
+            colComp: "Difficult Compositions (D/R/P)",
+            hintHighValue: "Higher numbers indicate greater difficulty",
+            colBad: "Difficult Matchups",
+            undoTitle: "Undo",
+            redoTitle: "Redo",
+            resetBtn: "Reset Data",
+            pickerTitle: "Select a Hero to Add",
+            pickerSubtitle: "*Already registered heroes will be overwritten",
+            ratingTitle: "Set Difficulty Level (1-4)",
+            cancel: "Cancel",
+            done: "Done",
+            edit: "Edit",
+            add: "+ Add"
         },
         archetypes: {
             dive: "Dive",
@@ -147,7 +169,12 @@ const HERO_NAMES = {
         "mercy": "マーシー",
         "moira": "モイラ",
         "wuyang": "ウーヤン",
-        "zenyatta": "ゼニヤッタ"
+        "zenyatta": "ゼニヤッタ",
+        "anran": "アンラン",
+        "domina": "ドミナ",
+        "emre": "エムレ",
+        "jetpack-cat": "ジェットパックキャット",
+        "mizuki": "ミズキ"
     },
     en: {
         "dva": "D.Va",
@@ -194,7 +221,12 @@ const HERO_NAMES = {
         "mercy": "Mercy",
         "moira": "Moira",
         "wuyang": "Wuyang",
-        "zenyatta": "Zenyatta"
+        "zenyatta": "Zenyatta",
+        "anran": "Anran",
+        "domina": "Domina",
+        "emre": "Emre",
+        "jetpack-cat": "Jetpack Cat",
+        "mizuki": "Mizuki"
     }
 };
 
